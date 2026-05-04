@@ -1,0 +1,57 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/client",
+  "installCommand": "npm install",
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/cati-izolasyonu",   "destination": "/hizmetler/cati-izolasyon-izmir",       "permanent": true },
+    { "source": "/teras-izolasyonu",  "destination": "/hizmetler/teras-izolasyon-izmir",      "permanent": true },
+    { "source": "/havuz-izolasyonu",  "destination": "/hizmetler/havuz-izolasyon-izmir",      "permanent": true },
+    { "source": "/epoksi-zemin",      "destination": "/hizmetler/epoksi-zemin-kaplama-izmir", "permanent": true },
+    { "source": "/polyurea",          "destination": "/hizmetler/polyurea-sprey-izmir",       "permanent": true },
+    { "source": "/iletisim-formu",    "destination": "/iletisim",                              "permanent": true },
+    { "source": "/hakkinda",          "destination": "/hakkimizda",                             "permanent": true },
+    { "source": "/projeler",          "destination": "/projelerimiz",                           "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(self), interest-cohort=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/projects/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/og-cover.jpg",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" },
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" },
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+# Cloudflare Pages — _headers
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+# ── Global security headers (her response için) ──
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-XSS-Protection: 1; mode=block
+
+# ── Static asset caching (1 yıl, immutable) ──
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/projects/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.mp4
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# ── Favicon: orta cache ──
+/favicon.ico
+  Cache-Control: public, max-age=86400
+
+/favicon-*.png
+  Cache-Control: public, max-age=86400
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=86400
+
+# ── og-cover: 1 hafta cache ──
+/og-cover.jpg
+  Cache-Control: public, max-age=604800
+
+# ── SEO dosyaları: 1 saat cache ──
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+  Content-Type: text/plain; charset=utf-8
+
+# ── HTML: kısa cache (rev. update'leri görsün) ──
+/
+  Cache-Control: public, max-age=300, s-maxage=600
+
+/*.html
+  Cache-Control: public, max-age=300, s-maxage=600

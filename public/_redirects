@@ -1,0 +1,20 @@
+# Cloudflare Pages — _redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# ── www → non-www (canonical = simizolasyon.com.tr) ──
+https://www.simizolasyon.com.tr/* https://simizolasyon.com.tr/:splat 301!
+
+# ── Eski Lovable URL'leri için redirect (gerekirse genişletilebilir) ──
+# /eski-url /yeni-url 301
+
+# ── Bilinen typo / alternatif URL'ler ──
+/cati-izolasyonu /hizmetler/cati-izolasyon-izmir 301
+/teras-izolasyonu /hizmetler/teras-izolasyon-izmir 301
+/havuz-izolasyonu /hizmetler/havuz-izolasyon-izmir 301
+/epoksi-zemin /hizmetler/epoksi-zemin-kaplama-izmir 301
+/polyurea /hizmetler/polyurea-sprey-izmir 301
+/iletisim-formu /iletisim 301
+/hakkinda /hakkimizda 301
+/projeler /projelerimiz 301
+
+# ── SPA fallback yok; TanStack Start SSR yapıyor ──

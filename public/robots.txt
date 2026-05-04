@@ -1,0 +1,39 @@
+# Sim İzolasyon — robots.txt
+User-agent: *
+Allow: /
+
+# Tarama dışı bırak
+Disallow: /api/
+Disallow: /_internal/
+Disallow: /admin/
+Disallow: /*?utm_*
+Disallow: /*?gclid=*
+Disallow: /*?fbclid=*
+
+# Görsel ve video taranabilsin
+Allow: /projects/
+Allow: /assets/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.mp4$
+
+# Tarama hızı
+Crawl-delay: 1
+
+# AI/scraper bot kısıtlamaları (saha fotoğraflarının korunması)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Sitemap
+Sitemap: https://simizolasyon.com.tr/sitemap.xml

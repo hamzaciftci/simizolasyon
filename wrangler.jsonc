@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sim-izolasyon",
+  "compatibility_date": "2025-09-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
+  "vars": {
+    "PUBLIC_SITE_URL": "https://simizolasyon.com.tr"
+  },
+  "observability": {
+    "enabled": true
+  }
+  // Custom domain (simizolasyon.com.tr) Cloudflare Dashboard'tan bağlanır.
+  // Workers > sim-izolasyon > Settings > Custom Domains > "+ Add Custom Domain"
+  // www.simizolasyon.com.tr için _redirects dosyasında 301 var (apex'e yönlendirir).
+}
