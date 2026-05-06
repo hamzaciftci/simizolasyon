@@ -1,0 +1,32 @@
+/**
+ * Vercel SPA entry point.
+ * TanStack Router'ı client-side render mode'da bootstrap eder.
+ * (Cloudflare Workers SSR build'ini __root.tsx'teki Start şeli yönetir; bu dosya
+ *  sadece SPA build için — vite.config.vercel.ts ile etkinleşir.)
+ */
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { RouterProvider } from "@tanstack/react-router";
+import { Toaster } from "@/components/ui/sonner";
+import { getRouter } from "./router";
+import "./styles.css";
+
+const router = getRouter();
+
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: ReturnType<typeof getRouter>;
+  }
+}
+
+const rootEl = document.getElementById("root");
+if (!rootEl) {
+  throw new Error("Root element #root not found in index.html");
+}
+
+createRoot(rootEl).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+    <Toaster position="top-right" richColors />
+  </StrictMode>,
+);

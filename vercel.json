@@ -1,11 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/client",
+  "buildCommand": "npm run build:vercel",
+  "outputDirectory": "dist",
   "installCommand": "npm install",
   "trailingSlash": false,
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/((?!api/|assets/|projects/|_next/|.*\\..*).*)", "destination": "/" }
+  ],
   "redirects": [
     { "source": "/cati-izolasyonu",   "destination": "/hizmetler/cati-izolasyon-izmir",       "permanent": true },
     { "source": "/teras-izolasyonu",  "destination": "/hizmetler/teras-izolasyon-izmir",      "permanent": true },
