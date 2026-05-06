@@ -1,6 +1,6 @@
 export const SITE = {
   name: "SİM İZOLASYON",
-  domain: "https://simizolasyon.com.tr",
+  domain: "https://www.simizolasyon.com.tr",
   phone1: "0534 623 49 62",
   phone2: "0534 746 56 62",
   phone3: "0537 748 01 62",

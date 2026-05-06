@@ -36,4 +36,4 @@ User-agent: Claude-Web
 Disallow: /
 
 # Sitemap
-Sitemap: https://simizolasyon.com.tr/sitemap.xml
+Sitemap: https://www.simizolasyon.com.tr/sitemap.xml

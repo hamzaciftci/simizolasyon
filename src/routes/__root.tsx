@@ -60,13 +60,13 @@ export const Route = createRootRoute({
       { property: "og:site_name", content: "Sim İzolasyon" },
       { property: "og:title", content: "Sim İzolasyon | İzmir İzolasyon ve Su Yalıtımı" },
       { property: "og:description", content: "İzmir'de 10+ yıl tecrübeyle profesyonel izolasyon ve su yalıtım hizmetleri." },
-      { property: "og:url", content: "https://simizolasyon.com.tr/" },
-      { property: "og:image", content: "https://simizolasyon.com.tr/og-cover.jpg" },
+      { property: "og:url", content: "https://www.simizolasyon.com.tr/" },
+      { property: "og:image", content: "https://www.simizolasyon.com.tr/og-cover.jpg" },
 
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Sim İzolasyon | İzmir İzolasyon" },
       { name: "twitter:description", content: "İzmir'de profesyonel izolasyon ve su yalıtım çözümleri." },
-      { name: "twitter:image", content: "https://simizolasyon.com.tr/og-cover.jpg" },
+      { name: "twitter:image", content: "https://www.simizolasyon.com.tr/og-cover.jpg" },
 
       { name: "theme-color", content: "#1e40af" },
     ],

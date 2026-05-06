@@ -1,8 +1,10 @@
 # Cloudflare Pages — _redirects
 # https://developers.cloudflare.com/pages/configuration/redirects/
 
-# ── www → non-www (canonical = simizolasyon.com.tr) ──
-https://www.simizolasyon.com.tr/* https://simizolasyon.com.tr/:splat 301!
+# ── apex → www (canonical = www.simizolasyon.com.tr) ──
+# Vercel'de bu redirect'i Vercel Dashboard > Domains yönetir.
+# Cloudflare Pages için aşağıdaki kural kullanılırdı (şimdi pasif):
+# https://simizolasyon.com.tr/* https://www.simizolasyon.com.tr/:splat 301!
 
 # ── Eski Lovable URL'leri için redirect (gerekirse genişletilebilir) ──
 # /eski-url /yeni-url 301

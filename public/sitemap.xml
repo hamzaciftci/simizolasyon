@@ -4,173 +4,173 @@
 
   <!-- ─── Ana sayfalar ─── -->
   <url>
-    <loc>https://simizolasyon.com.tr/</loc>
+    <loc>https://www.simizolasyon.com.tr/</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://simizolasyon.com.tr/hakkimizda</loc>
+    <loc>https://www.simizolasyon.com.tr/hakkimizda</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://simizolasyon.com.tr/iletisim</loc>
+    <loc>https://www.simizolasyon.com.tr/iletisim</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://simizolasyon.com.tr/hizmetler</loc>
+    <loc>https://www.simizolasyon.com.tr/hizmetler</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://simizolasyon.com.tr/projelerimiz</loc>
+    <loc>https://www.simizolasyon.com.tr/projelerimiz</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://simizolasyon.com.tr/blog</loc>
+    <loc>https://www.simizolasyon.com.tr/blog</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- ─── Hizmet sayfaları ─── -->
-  <url><loc>https://simizolasyon.com.tr/hizmetler/cati-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/teras-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/havuz-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/epoksi-zemin-kaplama-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/polyurea-sprey-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/endustriyel-zemin-kaplama-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/poliuretan-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/sandvic-panel-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/cam-elyaf-poliuretan-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/cam-elyaf-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/beton-ustu-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/seramik-ustu-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/islak-zemin-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/ic-cephe-dilatasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/dis-cephe-dilatasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/asansor-cukuru-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/enjeksiyon-yalitim-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/otopark-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/otopark-enjeksiyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/perde-beton-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://simizolasyon.com.tr/hizmetler/temel-bohcalama-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/cati-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/teras-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/havuz-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/epoksi-zemin-kaplama-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/polyurea-sprey-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/endustriyel-zemin-kaplama-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/poliuretan-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/sandvic-panel-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/cam-elyaf-poliuretan-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/cam-elyaf-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/beton-ustu-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/seramik-ustu-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/islak-zemin-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/ic-cephe-dilatasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/dis-cephe-dilatasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/asansor-cukuru-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/enjeksiyon-yalitim-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/otopark-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/otopark-enjeksiyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/perde-beton-izolasyon-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/hizmetler/temel-bohcalama-izmir</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- ─── İlçe bazlı landing sayfaları (Long-tail SEO) ─── -->
   <url>
-    <loc>https://simizolasyon.com.tr/cati-izolasyon-bornova</loc>
+    <loc>https://www.simizolasyon.com.tr/cati-izolasyon-bornova</loc>
     <lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/cati-izolasyon-karsiyaka</loc>
+    <loc>https://www.simizolasyon.com.tr/cati-izolasyon-karsiyaka</loc>
     <lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/teras-izolasyon-bornova</loc>
+    <loc>https://www.simizolasyon.com.tr/teras-izolasyon-bornova</loc>
     <lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/havuz-izolasyon-cesme</loc>
+    <loc>https://www.simizolasyon.com.tr/havuz-izolasyon-cesme</loc>
     <lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/havuz-izolasyon-urla</loc>
+    <loc>https://www.simizolasyon.com.tr/havuz-izolasyon-urla</loc>
     <lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/epoksi-zemin-cigli</loc>
+    <loc>https://www.simizolasyon.com.tr/epoksi-zemin-cigli</loc>
     <lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/su-yalitimi-karsiyaka</loc>
+    <loc>https://www.simizolasyon.com.tr/su-yalitimi-karsiyaka</loc>
     <lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/izolasyon-firmasi-bornova</loc>
+    <loc>https://www.simizolasyon.com.tr/izolasyon-firmasi-bornova</loc>
     <lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
 
   <!-- ─── Proje detay sayfaları ─── -->
   <url>
-    <loc>https://simizolasyon.com.tr/projelerimiz/perde-beton-xpx-drenaj</loc>
+    <loc>https://www.simizolasyon.com.tr/projelerimiz/perde-beton-xpx-drenaj</loc>
     <lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority>
     <image:image>
-      <image:loc>https://simizolasyon.com.tr/projects/perde-beton-xpx-drenaj/foto-01.jpg</image:loc>
+      <image:loc>https://www.simizolasyon.com.tr/projects/perde-beton-xpx-drenaj/foto-01.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/projelerimiz/soyak-sitesi-parapet-asansor</loc>
+    <loc>https://www.simizolasyon.com.tr/projelerimiz/soyak-sitesi-parapet-asansor</loc>
     <lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority>
     <image:image>
-      <image:loc>https://simizolasyon.com.tr/projects/soyak-sitesi-parapet-asansor/foto-01.jpg</image:loc>
+      <image:loc>https://www.simizolasyon.com.tr/projects/soyak-sitesi-parapet-asansor/foto-01.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/projelerimiz/gizli-cati-yuruyus-yolu</loc>
+    <loc>https://www.simizolasyon.com.tr/projelerimiz/gizli-cati-yuruyus-yolu</loc>
     <lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
     <image:image>
-      <image:loc>https://simizolasyon.com.tr/projects/gizli-cati-yuruyus-yolu/foto-01.jpg</image:loc>
+      <image:loc>https://www.simizolasyon.com.tr/projects/gizli-cati-yuruyus-yolu/foto-01.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/projelerimiz/macfit-islak-zemin-membran</loc>
+    <loc>https://www.simizolasyon.com.tr/projelerimiz/macfit-islak-zemin-membran</loc>
     <lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
     <image:image>
-      <image:loc>https://simizolasyon.com.tr/projects/macfit-islak-zemin-membran/foto-01.jpg</image:loc>
+      <image:loc>https://www.simizolasyon.com.tr/projects/macfit-islak-zemin-membran/foto-01.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/projelerimiz/sandvic-panel-su-oluk</loc>
+    <loc>https://www.simizolasyon.com.tr/projelerimiz/sandvic-panel-su-oluk</loc>
     <lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
     <image:image>
-      <image:loc>https://simizolasyon.com.tr/projects/sandvic-panel-su-oluk/foto-01.jpg</image:loc>
+      <image:loc>https://www.simizolasyon.com.tr/projects/sandvic-panel-su-oluk/foto-01.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/projelerimiz/seramik-uzeri-yalitim</loc>
+    <loc>https://www.simizolasyon.com.tr/projelerimiz/seramik-uzeri-yalitim</loc>
     <lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.65</priority>
   </url>
   <url>
-    <loc>https://simizolasyon.com.tr/projelerimiz/beton-ustu-cam-elyaf</loc>
+    <loc>https://www.simizolasyon.com.tr/projelerimiz/beton-ustu-cam-elyaf</loc>
     <lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.65</priority>
   </url>
 
   <!-- ─── Blog yazıları ─── -->
-  <url><loc>https://simizolasyon.com.tr/blog/izmir-cati-izolasyonu-rehberi-2026</loc><lastmod>2026-04-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/teras-izolasyon-fiyatlari-2026</loc><lastmod>2026-04-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/polyurea-nedir-avantajlari</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/havuz-izolasyonu-7-yol</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/epoksi-zemin-cesitleri</loc><lastmod>2026-03-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/cati-su-sizintisi-nasil-bulunur</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/izolasyon-bornova</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/su-yalitimi-karsiyaka</loc><lastmod>2026-03-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/polyurea-vs-membran-karsilastirma</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/endustriyel-tesis-zemin-rehberi</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/otopark-izolasyon-rehberi</loc><lastmod>2026-02-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/asansor-cukuru-rehberi</loc><lastmod>2026-02-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/banyo-izolasyon-onemi</loc><lastmod>2026-02-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/cam-elyaf-takviye-detay</loc><lastmod>2026-01-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/epoksi-atatuk-osb</loc><lastmod>2026-01-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/teras-mi-cati-mi-sizinti</loc><lastmod>2026-01-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/eski-bina-su-yalitimi</loc><lastmod>2026-01-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/izolasyon-garantisi-rehberi</loc><lastmod>2025-12-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/sandvic-panel-oluk-sizinti</loc><lastmod>2025-12-21</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/izolasyon-yaparken-10-hata</loc><lastmod>2025-12-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/polyurea-uygulayici-secimi</loc><lastmod>2025-12-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/izolasyon-sezonu-aylar</loc><lastmod>2025-11-30</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/seramik-ustu-izolasyon-rehberi</loc><lastmod>2025-11-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://simizolasyon.com.tr/blog/enjeksiyon-yalitim-rehberi</loc><lastmod>2025-11-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/izmir-cati-izolasyonu-rehberi-2026</loc><lastmod>2026-04-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/teras-izolasyon-fiyatlari-2026</loc><lastmod>2026-04-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/polyurea-nedir-avantajlari</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/havuz-izolasyonu-7-yol</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/epoksi-zemin-cesitleri</loc><lastmod>2026-03-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/cati-su-sizintisi-nasil-bulunur</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/izolasyon-bornova</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/su-yalitimi-karsiyaka</loc><lastmod>2026-03-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/polyurea-vs-membran-karsilastirma</loc><lastmod>2026-02-28</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/endustriyel-tesis-zemin-rehberi</loc><lastmod>2026-02-22</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/otopark-izolasyon-rehberi</loc><lastmod>2026-02-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/asansor-cukuru-rehberi</loc><lastmod>2026-02-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/banyo-izolasyon-onemi</loc><lastmod>2026-02-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/cam-elyaf-takviye-detay</loc><lastmod>2026-01-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/epoksi-atatuk-osb</loc><lastmod>2026-01-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/teras-mi-cati-mi-sizinti</loc><lastmod>2026-01-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/eski-bina-su-yalitimi</loc><lastmod>2026-01-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/izolasyon-garantisi-rehberi</loc><lastmod>2025-12-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/sandvic-panel-oluk-sizinti</loc><lastmod>2025-12-21</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/izolasyon-yaparken-10-hata</loc><lastmod>2025-12-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/polyurea-uygulayici-secimi</loc><lastmod>2025-12-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/izolasyon-sezonu-aylar</loc><lastmod>2025-11-30</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/seramik-ustu-izolasyon-rehberi</loc><lastmod>2025-11-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.simizolasyon.com.tr/blog/enjeksiyon-yalitim-rehberi</loc><lastmod>2025-11-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 </urlset>
