@@ -9,7 +9,7 @@ export const SITE = {
   phone3Tel: "+905377480162",
   whatsapp: "905346234962",
   whatsappMessage: "Merhaba, izolasyon hizmetleriniz hakkında bilgi almak istiyorum.",
-  address: "YAMANLAR MAH. KUBİLAY CAD. NO: 233 C BAYRAKLI / İZMİR",
+  address: "Yamanlar Mah. Kubilay Cad. No: 233 C Bayraklı / İzmir",
   city: "İzmir",
   email: "info@simizolasyon.com.tr",
 };
