@@ -162,9 +162,9 @@ export function Contact() {
           {/* Form column */}
           <form
             onSubmit={onSubmit}
-            className="lg:col-span-3 rounded-3xl bg-white border border-slate-200 p-7 md:p-9 shadow-lg relative overflow-hidden"
+            className="lg:col-span-3 rounded-3xl bg-white border border-slate-200 p-7 md:p-9 shadow-lg relative"
           >
-            <div className="absolute -top-32 -right-32 w-64 h-64 rounded-full bg-brand-soft/60 blur-3xl pointer-events-none" />
+            <div className="absolute -top-32 -right-32 w-64 h-64 rounded-full bg-brand-soft/40 pointer-events-none -z-10" />
 
             <div className="relative">
               <h3 className="font-display font-semibold text-3xl text-ink tracking-tight">Hızlı Teklif Formu</h3>
@@ -191,7 +191,7 @@ export function Contact() {
                     autoComplete="name"
                     placeholder="Adınız"
                     disabled={status === "submitting"}
-                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all disabled:opacity-60"
+                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150 disabled:opacity-60"
                   />
                 </div>
                 <div>
@@ -204,7 +204,7 @@ export function Contact() {
                     autoComplete="tel"
                     placeholder="0xxx xxx xx xx"
                     disabled={status === "submitting"}
-                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all disabled:opacity-60"
+                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150 disabled:opacity-60"
                   />
                 </div>
                 <div className="sm:col-span-2">
@@ -216,7 +216,7 @@ export function Contact() {
                     autoComplete="email"
                     placeholder="ornek@mail.com"
                     disabled={status === "submitting"}
-                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all disabled:opacity-60"
+                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150 disabled:opacity-60"
                   />
                 </div>
                 <div className="sm:col-span-2">
@@ -242,7 +242,7 @@ export function Contact() {
                     rows={4}
                     placeholder="Projenizi kısaca anlatın — adres, alan (m²), mevcut durum..."
                     disabled={status === "submitting"}
-                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand resize-none transition-all disabled:opacity-60"
+                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand resize-none transition-colors duration-150 disabled:opacity-60"
                   />
                 </div>
 

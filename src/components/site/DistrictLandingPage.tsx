@@ -267,7 +267,7 @@ export function DistrictLandingPage({ content }: { content: DistrictContent }) {
                   onSubmit={onSubmit}
                   className="rounded-3xl bg-white border border-slate-200 p-6 shadow-lg relative overflow-hidden"
                 >
-                  <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-brand-soft/60 blur-3xl pointer-events-none" />
+                  <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-brand-soft/40 pointer-events-none -z-10" />
                   <div className="relative">
                     <p className="text-xs uppercase tracking-wider font-bold text-cta-deep">Ücretsiz Keşif</p>
                     <h3 className="mt-2 font-display font-semibold text-2xl text-ink leading-tight">
@@ -283,15 +283,15 @@ export function DistrictLandingPage({ content }: { content: DistrictContent }) {
                     <div className="mt-5 space-y-3">
                       <input
                         required minLength={2} name="name" placeholder="Ad Soyad" autoComplete="name" disabled={submitting}
-                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all disabled:opacity-60"
+                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150 disabled:opacity-60"
                       />
                       <input
                         required type="tel" name="phone" placeholder="Telefon" autoComplete="tel" disabled={submitting}
-                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all disabled:opacity-60"
+                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150 disabled:opacity-60"
                       />
                       <textarea
                         name="message" rows={3} placeholder="Kısa proje detayı..." disabled={submitting}
-                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand resize-none transition-all disabled:opacity-60"
+                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand resize-none transition-colors duration-150 disabled:opacity-60"
                       />
 
                       <label className="flex items-start gap-2 text-[11.5px] text-slate-600 leading-relaxed cursor-pointer select-none pt-1">
