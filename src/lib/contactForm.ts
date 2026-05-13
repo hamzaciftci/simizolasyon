@@ -56,16 +56,6 @@ export function validatePhone(phone: string): boolean {
 export async function submitContactForm(
   data: ContactFormPayload,
 ): Promise<SubmitResult & { whatsappUrl: string }> {
-  // Honeypot: bot'lar bu alanı doldurur, gerçek kullanıcı boş bırakır
-  if (data.honeypot && data.honeypot.trim().length > 0) {
-    return {
-      ok: false,
-      channel: "whatsapp-only",
-      error: "spam_detected",
-      whatsappUrl: waLink(),
-    };
-  }
-
   // WhatsApp pre-fill mesajı (her durumda hazırla)
   const waMessage = [
     `Merhaba, ${data.source ?? "iletisim formu"} üzerinden teklif almak istiyorum.`,

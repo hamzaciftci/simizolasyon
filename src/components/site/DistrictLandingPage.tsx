@@ -40,7 +40,6 @@ export function DistrictLandingPage({ content }: { content: DistrictContent }) {
     const phone = String(fd.get("phone") || "").trim();
     const message = String(fd.get("message") || "").trim();
     const kvkk = fd.get("kvkk") === "on";
-    const honeypot = String(fd.get("website") || "");
 
     if (name.length < 2) { toast.error("Lütfen adınızı yazın."); return; }
     if (!validatePhone(phone)) { toast.error("Geçerli bir telefon numarası girin."); return; }
@@ -51,7 +50,6 @@ export function DistrictLandingPage({ content }: { content: DistrictContent }) {
       name, phone, message: message || undefined,
       service: `${content.serviceName} (${content.district})`,
       source: `İlçe landing: ${content.slug}`,
-      honeypot,
     });
 
     if (result.ok && result.channel === "email") {
@@ -277,25 +275,22 @@ export function DistrictLandingPage({ content }: { content: DistrictContent }) {
                       {content.serviceName.toLowerCase()} için bilgilerinizi bırakın.
                     </p>
 
-                    {/* Honeypot */}
-                    <input type="text" name="website" tabIndex={-1} autoComplete="off" className="absolute -left-[9999px] opacity-0 pointer-events-none" aria-hidden="true" />
-
                     <div className="mt-5 space-y-3">
                       <input
-                        required minLength={2} name="name" placeholder="Ad Soyad" autoComplete="name" disabled={submitting}
-                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150 disabled:opacity-60"
+                        required type="text" name="name" placeholder="Ad Soyad"
+                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150"
                       />
                       <input
-                        required type="tel" name="phone" placeholder="Telefon" autoComplete="tel" disabled={submitting}
-                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150 disabled:opacity-60"
+                        required type="tel" name="phone" placeholder="Telefon" inputMode="tel"
+                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150"
                       />
                       <textarea
-                        name="message" rows={3} placeholder="Kısa proje detayı..." disabled={submitting}
-                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand resize-none transition-colors duration-150 disabled:opacity-60"
+                        name="message" rows={3} placeholder="Kısa proje detayı..."
+                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand resize-none transition-colors duration-150"
                       />
 
                       <label className="flex items-start gap-2 text-[11.5px] text-slate-600 leading-relaxed cursor-pointer select-none pt-1">
-                        <input type="checkbox" name="kvkk" required disabled={submitting} className="mt-0.5 h-3.5 w-3.5 rounded border-slate-300 text-brand focus:ring-brand/30 disabled:opacity-60" />
+                        <input type="checkbox" name="kvkk" required className="mt-0.5 h-3.5 w-3.5 rounded border-slate-300 text-brand focus:ring-brand/30" />
                         <span>Kişisel verilerimin teklif/keşif için işlenmesini onaylıyorum (<a href="/iletisim" className="underline text-brand">KVKK</a>).</span>
                       </label>
                     </div>

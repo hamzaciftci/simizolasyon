@@ -21,7 +21,6 @@ export function Contact() {
     const service = String(fd.get("service") || "").trim();
     const message = String(fd.get("message") || "").trim();
     const kvkk = fd.get("kvkk") === "on";
-    const honeypot = String(fd.get("website") || "");
 
     if (name.length < 2) {
       toast.error("Lütfen adınızı ve soyadınızı yazın.");
@@ -45,7 +44,6 @@ export function Contact() {
       service: service || undefined,
       message: message || undefined,
       source: "Anasayfa iletişim formu",
-      honeypot,
     });
 
     setWaFallbackUrl(result.whatsappUrl);
@@ -170,28 +168,16 @@ export function Contact() {
               <h3 className="font-display font-semibold text-3xl text-ink tracking-tight">Hızlı Teklif Formu</h3>
               <p className="mt-1.5 text-sm text-slate-500">Bilgilerinizi bırakın, 30 dk içinde sizi arayalım.</p>
 
-              {/* Honeypot — bot trap, kullanıcılar görmez */}
-              <input
-                type="text"
-                name="website"
-                tabIndex={-1}
-                autoComplete="off"
-                className="absolute -left-[9999px] opacity-0 pointer-events-none"
-                aria-hidden="true"
-              />
-
               <div className="mt-7 grid sm:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="name" className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2 block">Ad Soyad *</label>
                   <input
                     id="name"
                     required
-                    minLength={2}
+                    type="text"
                     name="name"
-                    autoComplete="name"
                     placeholder="Adınız"
-                    disabled={status === "submitting"}
-                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150 disabled:opacity-60"
+                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150"
                   />
                 </div>
                 <div>
@@ -201,10 +187,9 @@ export function Contact() {
                     required
                     type="tel"
                     name="phone"
-                    autoComplete="tel"
                     placeholder="0xxx xxx xx xx"
-                    disabled={status === "submitting"}
-                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150 disabled:opacity-60"
+                    inputMode="tel"
+                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150"
                   />
                 </div>
                 <div className="sm:col-span-2">
@@ -213,10 +198,9 @@ export function Contact() {
                     id="email"
                     type="email"
                     name="email"
-                    autoComplete="email"
+                    inputMode="email"
                     placeholder="ornek@mail.com"
-                    disabled={status === "submitting"}
-                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150 disabled:opacity-60"
+                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors duration-150"
                   />
                 </div>
                 <div className="sm:col-span-2">
@@ -225,8 +209,7 @@ export function Contact() {
                     id="service"
                     name="service"
                     defaultValue=""
-                    disabled={status === "submitting"}
-                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand cursor-pointer transition-all disabled:opacity-60"
+                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand cursor-pointer transition-colors duration-150"
                   >
                     <option value="" disabled>Hizmet seçin —</option>
                     {SERVICES.map((s) => (
@@ -241,8 +224,7 @@ export function Contact() {
                     name="message"
                     rows={4}
                     placeholder="Projenizi kısaca anlatın — adres, alan (m²), mevcut durum..."
-                    disabled={status === "submitting"}
-                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand resize-none transition-colors duration-150 disabled:opacity-60"
+                    className="w-full rounded-2xl border border-slate-200 bg-surface px-4 py-3.5 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand resize-none transition-colors duration-150"
                   />
                 </div>
 
@@ -252,8 +234,7 @@ export function Contact() {
                       type="checkbox"
                       name="kvkk"
                       required
-                      disabled={status === "submitting"}
-                      className="mt-0.5 h-4 w-4 rounded border-slate-300 text-brand focus:ring-brand/30 disabled:opacity-60"
+                      className="mt-0.5 h-4 w-4 rounded border-slate-300 text-brand focus:ring-brand/30"
                     />
                     <span>
                       <strong className="text-ink">KVKK Aydınlatma:</strong> İletişim formunda paylaştığım kişisel verilerin,
