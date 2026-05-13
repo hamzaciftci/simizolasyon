@@ -16,6 +16,8 @@ import { SITE, waLink } from "@/lib/site";
 import { SERVICES, getService } from "@/lib/services";
 import { getServiceContent } from "@/lib/serviceContent";
 import { DISTRICT_CONTENT } from "@/lib/districtContent";
+import { submitContactForm, validatePhone } from "@/lib/contactForm";
+import { toast } from "sonner";
 import { ServiceSchema } from "@/components/seo/ServiceSchema";
 import { FaqSchema } from "@/components/seo/FaqSchema";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
@@ -62,17 +64,37 @@ function HizmetDetayPage() {
   const { service, content } = Route.useLoaderData();
   const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const name = String(fd.get("name") || "").trim();
+    const phone = String(fd.get("phone") || "").trim();
+    const message = String(fd.get("message") || "").trim();
+    const kvkk = fd.get("kvkk") === "on";
+    const honeypot = String(fd.get("website") || "");
+
+    if (name.length < 2) { toast.error("Lütfen adınızı yazın."); return; }
+    if (!validatePhone(phone)) { toast.error("Geçerli bir telefon numarası girin."); return; }
+    if (!kvkk) { toast.error("KVKK aydınlatma metnini onaylayın."); return; }
+
     setSubmitting(true);
-    const fd = new FormData(e.currentTarget);
-    const name = String(fd.get("name") || "");
-    const phone = String(fd.get("phone") || "");
-    const message = String(fd.get("message") || "");
-    const text = `Merhaba, ${content.category} hizmeti için teklif almak istiyorum.\n\nAd Soyad: ${name}\nTelefon: ${phone}\nMesaj: ${message}`;
-    window.open(waLink(text), "_blank");
-    setTimeout(() => setSubmitting(false), 700);
-    e.currentTarget.reset();
+    const result = await submitContactForm({
+      name, phone, message: message || undefined,
+      service: content.category,
+      source: `Hizmet detay: ${content.slug}`,
+      honeypot,
+    });
+
+    if (result.ok && result.channel === "email") {
+      toast.success("Mesajınız alındı — 30 dk içinde dönüş yapacağız.");
+      form.reset();
+    } else {
+      window.open(result.whatsappUrl, "_blank", "noopener,noreferrer");
+      toast.success(result.ok ? "WhatsApp üzerinden bağlanıyorsunuz..." : "WhatsApp üzerinden devam edebilirsiniz.");
+      form.reset();
+    }
+    setTimeout(() => setSubmitting(false), 500);
   };
 
   const related = content.relatedServices
@@ -279,28 +301,48 @@ function HizmetDetayPage() {
                     </h3>
                     <p className="mt-1.5 text-sm text-slate-500">Bilgilerinizi bırakın, sizi arayalım.</p>
 
+                    {/* Honeypot */}
+                    <input type="text" name="website" tabIndex={-1} autoComplete="off" className="absolute -left-[9999px] opacity-0 pointer-events-none" aria-hidden="true" />
+
                     <div className="mt-5 space-y-3">
                       <input
-                        required name="name" placeholder="Ad Soyad"
-                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all"
+                        required minLength={2} name="name" placeholder="Ad Soyad" autoComplete="name" disabled={submitting}
+                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all disabled:opacity-60"
                       />
                       <input
-                        required type="tel" name="phone" placeholder="Telefon (0xxx xxx xx xx)"
-                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all"
+                        required type="tel" name="phone" placeholder="Telefon (0xxx xxx xx xx)" autoComplete="tel" disabled={submitting}
+                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all disabled:opacity-60"
                       />
                       <textarea
-                        name="message" rows={3} placeholder="Kısa proje detayı..."
-                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand resize-none transition-all"
+                        name="message" rows={3} placeholder="Kısa proje detayı..." disabled={submitting}
+                        className="w-full rounded-xl border border-slate-200 bg-surface px-4 py-3 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand resize-none transition-all disabled:opacity-60"
                       />
+
+                      <label className="flex items-start gap-2 text-[11.5px] text-slate-600 leading-relaxed cursor-pointer select-none pt-1">
+                        <input type="checkbox" name="kvkk" required disabled={submitting} className="mt-0.5 h-3.5 w-3.5 rounded border-slate-300 text-brand focus:ring-brand/30 disabled:opacity-60" />
+                        <span>Kişisel verilerimin teklif/keşif için işlenmesini onaylıyorum (<a href="/iletisim" className="underline text-brand">KVKK</a>).</span>
+                      </label>
                     </div>
 
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="mt-4 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-cta text-cta-foreground px-5 py-3.5 text-sm font-semibold shadow-cta hover:scale-[1.01] transition-transform disabled:opacity-70"
+                      className="mt-4 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-cta text-cta-foreground px-5 py-3.5 text-sm font-semibold shadow-cta hover:scale-[1.01] transition-transform disabled:opacity-70 disabled:cursor-not-allowed"
                     >
-                      <MessageCircle className="h-4 w-4" />
-                      {submitting ? "Gönderiliyor..." : "WhatsApp ile Gönder"}
+                      {submitting ? (
+                        <>
+                          <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" strokeOpacity="0.25" />
+                            <path d="M22 12a10 10 0 0 0-10-10" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                          </svg>
+                          Gönderiliyor...
+                        </>
+                      ) : (
+                        <>
+                          <MessageCircle className="h-4 w-4" />
+                          Teklif Talebi Gönder
+                        </>
+                      )}
                     </button>
 
                     <div className="mt-4 pt-4 border-t border-slate-200 space-y-2 text-xs">
