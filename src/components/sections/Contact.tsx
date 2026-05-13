@@ -9,6 +9,7 @@ type Status = "idle" | "submitting" | "success" | "error";
 
 export function Contact() {
   const [status, setStatus] = useState<Status>("idle");
+  const [waFallbackUrl, setWaFallbackUrl] = useState<string>("");
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,7 +23,6 @@ export function Contact() {
     const kvkk = fd.get("kvkk") === "on";
     const honeypot = String(fd.get("website") || "");
 
-    // Client-side validasyon
     if (name.length < 2) {
       toast.error("Lütfen adınızı ve soyadınızı yazın.");
       return;
@@ -48,25 +48,19 @@ export function Contact() {
       honeypot,
     });
 
+    setWaFallbackUrl(result.whatsappUrl);
+
     if (result.ok && result.channel === "email") {
       toast.success("Mesajınız alındı — en geç 30 dakika içinde dönüş yapacağız.");
       setStatus("success");
       form.reset();
-      // Kullanıcıya WhatsApp opsiyonel kanal olarak gösterilebilir
-      setTimeout(() => setStatus("idle"), 5000);
     } else if (result.ok) {
-      // Email key yok — WhatsApp'a yönlendir
-      window.open(result.whatsappUrl, "_blank", "noopener,noreferrer");
-      toast.success("WhatsApp üzerinden bağlanıyorsunuz...");
+      // Key yoksa: WhatsApp-only mode — kullanıcıya görünür link/buton sunulur (pop-up engellenmesin)
+      toast.success("Mesajınız hazırlandı — aşağıdaki butondan WhatsApp ile devam edebilirsiniz.");
       setStatus("success");
-      form.reset();
-      setTimeout(() => setStatus("idle"), 5000);
     } else {
-      // Email başarısız — kullanıcıya WhatsApp fallback öner
-      window.open(result.whatsappUrl, "_blank", "noopener,noreferrer");
-      toast.error("Form gönderilemedi. WhatsApp üzerinden iletişim açılıyor...");
+      toast.error("Form gönderilemedi. Aşağıdaki butondan WhatsApp ile iletişime geçebilirsiniz.");
       setStatus("error");
-      setTimeout(() => setStatus("idle"), 5000);
     }
   };
 
@@ -297,28 +291,54 @@ export function Contact() {
               </button>
 
               {status === "success" && (
-                <div className="mt-4 flex items-start gap-2.5 rounded-xl bg-green-50 border border-green-200 p-4 text-sm text-green-800">
-                  <CheckCircle2 className="h-4 w-4 mt-0.5 shrink-0" />
-                  <div>
-                    <p className="font-semibold">Teşekkürler — mesajınız iletildi.</p>
-                    <p className="mt-1 text-[13px] text-green-700">
-                      Uzman ekibimiz en geç 30 dakika içinde sizinle iletişime geçecek. Acil bir durum varsa
-                      doğrudan {SITE.phone1} numaralı telefonu arayabilirsiniz.
-                    </p>
+                <div className="mt-4 rounded-xl bg-green-50 border border-green-200 p-4">
+                  <div className="flex items-start gap-2.5 text-sm text-green-800">
+                    <CheckCircle2 className="h-4 w-4 mt-0.5 shrink-0" />
+                    <div className="flex-1">
+                      <p className="font-semibold">Teşekkürler — mesajınız iletildi.</p>
+                      <p className="mt-1 text-[13px] text-green-700">
+                        Uzman ekibimiz en geç 30 dakika içinde sizinle iletişime geçecek. Acil bir durum
+                        varsa doğrudan <a href={`tel:${SITE.phone1Tel}`} className="font-semibold underline">{SITE.phone1}</a> arayabilirsiniz.
+                      </p>
+                    </div>
                   </div>
+                  {waFallbackUrl && (
+                    <a
+                      href={waFallbackUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-2 rounded-xl bg-whatsapp text-whatsapp-foreground px-4 py-2.5 text-[13px] font-semibold hover:bg-whatsapp-deep transition-colors"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      WhatsApp ile de yazmak isterseniz tıklayın
+                    </a>
+                  )}
                 </div>
               )}
 
               {status === "error" && (
-                <div className="mt-4 flex items-start gap-2.5 rounded-xl bg-amber-50 border border-amber-200 p-4 text-sm text-amber-800">
-                  <AlertCircle className="h-4 w-4 mt-0.5 shrink-0" />
-                  <div>
-                    <p className="font-semibold">Form gönderilemedi.</p>
-                    <p className="mt-1 text-[13px] text-amber-700">
-                      Geçici bir sorun oluştu — açtığımız WhatsApp penceresinden mesaj atabilir veya
-                      doğrudan {SITE.phone1} numaralı telefonu arayabilirsiniz.
-                    </p>
+                <div className="mt-4 rounded-xl bg-amber-50 border border-amber-200 p-4">
+                  <div className="flex items-start gap-2.5 text-sm text-amber-800">
+                    <AlertCircle className="h-4 w-4 mt-0.5 shrink-0" />
+                    <div className="flex-1">
+                      <p className="font-semibold">Form gönderilemedi.</p>
+                      <p className="mt-1 text-[13px] text-amber-700">
+                        Geçici bir sorun oluştu. Aşağıdaki WhatsApp butonundan veya doğrudan{" "}
+                        <a href={`tel:${SITE.phone1Tel}`} className="font-semibold underline">{SITE.phone1}</a> numaralı telefondan ulaşabilirsiniz.
+                      </p>
+                    </div>
                   </div>
+                  {waFallbackUrl && (
+                    <a
+                      href={waFallbackUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-2 rounded-xl bg-whatsapp text-whatsapp-foreground px-4 py-2.5 text-[13px] font-semibold hover:bg-whatsapp-deep transition-colors"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      WhatsApp ile mesaj at
+                    </a>
+                  )}
                 </div>
               )}
 

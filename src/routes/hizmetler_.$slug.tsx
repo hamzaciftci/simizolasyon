@@ -89,10 +89,12 @@ function HizmetDetayPage() {
     if (result.ok && result.channel === "email") {
       toast.success("Mesajınız alındı — 30 dk içinde dönüş yapacağız.");
       form.reset();
+    } else if (result.ok) {
+      toast.success("Mesajınız hazırlandı. WhatsApp ile de yazabilirsiniz.");
+      window.location.href = result.whatsappUrl;
     } else {
-      window.open(result.whatsappUrl, "_blank", "noopener,noreferrer");
-      toast.success(result.ok ? "WhatsApp üzerinden bağlanıyorsunuz..." : "WhatsApp üzerinden devam edebilirsiniz.");
-      form.reset();
+      toast.error("Form gönderilemedi. WhatsApp ile devam edin.");
+      window.location.href = result.whatsappUrl;
     }
     setTimeout(() => setSubmitting(false), 500);
   };

@@ -17,7 +17,13 @@
 import { waLink, SITE } from "./site";
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY as string | undefined;
+
+// Web3Forms access key (info@simizolasyon.com.tr için).
+// VITE_WEB3FORMS_KEY env var varsa o kullanılır; yoksa aşağıdaki hardcoded fallback.
+// Key public (browser'da görünür) — bu Web3Forms'un beklenen pattern'i.
+const WEB3FORMS_KEY =
+  (import.meta.env.VITE_WEB3FORMS_KEY as string | undefined) ||
+  "20db1110-2ad3-493b-af8a-09396d201a6f";
 
 export type ContactFormPayload = {
   name: string;
